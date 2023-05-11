@@ -1,0 +1,17 @@
+Iniciar Projeto 
+
+yarn init -y 
+
+yarn add react  
+yarn add @babel/core @babel/cli @babel/preset-env -D
+yarn add webpack webpack-cli webpack-dev-server -D
+yarn add cross-env -D //Para definir variaveis ambientes independente do sistema
+operacional.
+
+yarn add @babel/preset-typescript -D
+yarn add @types/react-dom
+
+Arquivos para criar:
+
+babel.config.js
+webpack.config.js

@@ -1,0 +1,71 @@
+/* nav */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* cor de fundo da barra de navegação */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* sombra na barra de navegação */
+}
+
+.imglogo {
+  width: 80px; /* ajuste a largura da imagem conforme necessário */
+  height: auto; /* altura ajustada automaticamente para manter a proporção */
+}
+
+.navlist {
+  z-index: 99999;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlist li {
+  margin-right: 20px; /* espaço entre os links */
+}
+
+#texto {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000000; /* cor do texto do link */
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out; /* transição suave na cor do texto */
+}
+
+#texto:hover {
+  color: #babdb6; /* cor do texto do link quando o mouse está sobre ele */
+}
+
+.navlist a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+@media (max-width: 28.75em) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+  
+  .navlist {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  .navlist li {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+  }
+  .imglogo{
+    display: flex;
+    align-items: end !important;
+    margin-left: 12px !important;
+  }
+}

@@ -1,0 +1,66 @@
+
+/* Base reset */
+*{
+  margin: 0;
+  padding:  0;
+  box-sizing: border-box;
+}
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+
+  /* Define o tamanho da fonte para facilitar os cálculos rem
+   * tamanho padrão da fonte do documento = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62,5%, 1rem = 10px, 62,5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  
+}
+
+/* Algumas consultas de mídia para definir alguns tamanhos de fonte em diferentes tamanhos de tela.
+ * Isso ajuda a automatizar um pouco a capacidade de resposta.
+ * O truque é usar a unidade rem para valores de tamanho, margem e preenchimento.
+ * Porque rem é relativo ao tamanho da fonte do documento
+ * quando aumentamos ou diminuímos o tamanho da fonte no documento
+ * afetará todas as propriedades usando unidades rem para os valores.
+*/
+
+/* Estou usando a unidade em para pontos de interrupção
+ * O cálculo é o seguinte
+ * tamanho da tela dividido pelo tamanho da fonte base do navegador
+ * Como exemplo: um ponto de interrupção em 980px
+ * 980px / 16px = 61,25em
+/* 1200px / 16px = 75em */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+
+body{
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 300;
+
+}

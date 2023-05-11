@@ -1,0 +1,29 @@
+.containerSobre{
+  height: 0 auto;
+  margin-top: 80px !important;
+  margin-bottom: 50px !important;
+  max-width: 1000px; /* Define a largura máxima do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  padding: 0 20px; /* Adiciona um espaçamento interno ao contêiner */
+
+  p{
+    font-size: 1.5rem; /* Define o tamanho da fonte do texto */
+    border-left: 2px solid #ECC455;
+    padding: 0.75rem;
+    font-family: 'Poppins',sans-serif;
+    color: #927D7D;
+    font-weight: 400;
+
+    line-height: 1.5; /* Define o espaçamento entre as linhas */
+  }
+  span{
+    
+  }
+  h1{
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    font-size: 36px; /* Define o tamanho da fonte do cabeçalho */
+    margin-bottom: 50px !important; /* Adiciona um espaçamento abaixo do cabeçalho */
+  }
+}
+

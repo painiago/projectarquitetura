@@ -1,0 +1,57 @@
+.containerProjeto{
+  margin-top: 100px !important;
+  h1{
+    
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    font-size: 36px; /* Define o tamanho da fonte do cabeçalho */
+    margin-bottom: 50px !important; /* Adiciona um espaçamento abaixo do cabeçalho */
+  }
+
+}
+
+.containerSobre {
+  padding: 20px;
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  
+}
+
+.item {
+  width: 100%; /* Ajusta a largura dos itens para 100% em telas menores */
+  margin-bottom: 20px;
+  border: 1px solid #707070;
+  padding: 2rem;
+  border-radius: 16px;
+
+}
+
+.item h2 {
+  font-size: 22px;
+  margin: 20px 0 10px;
+}
+
+.item p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ajusta a largura dos itens para 45% em telas maiores */
+@media screen and (min-width: 768px) {
+  .item {
+    width: 45%;
+  }
+}
