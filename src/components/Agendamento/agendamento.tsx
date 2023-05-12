@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './agendamento.scss';
 import axios from 'axios';
 
+// importação das imagens
+import imgfrontal from '/public/img/imgfrontal.jpg';
+
 function Agendamento() {
   const [showForm, setShowForm] = useState(false);
 
@@ -62,14 +65,14 @@ function Agendamento() {
       if (formIsValid) {
     axios.post('/api/enviarDadosParaFaunaDB', { nome, email, data, horario })
       .then(() => {
-        console.log('Dados enviados para o FaunaDB com sucesso!');
+        // console.log('Dados enviados para o FaunaDB com sucesso!');
         setNome('');
         setEmail('');
         setData('');
         setHorario('');
       })
       .catch((error) => {
-        console.error('Erro ao enviar dados para o FaunaDB:', error);
+        // console.error('Erro ao enviar dados para o FaunaDB:', error);
       });
   }
   }
@@ -79,7 +82,7 @@ function Agendamento() {
     <div className='containeragendamento' id="itemcontato">
       <div className='contentagentamento'>
         <div className='item-agendamento'>
-          <img src="../../../img/imgfrontal.jpg" alt="" />
+          <img src={imgfrontal} alt="" />
         </div>
         <div className='item-agendamento' >
         <div className='agendamento-form'>

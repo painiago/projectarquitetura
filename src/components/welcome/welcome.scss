@@ -8,7 +8,7 @@
   height: 85vh;
   position: relative;
   background-color: #000;
-  background-image: url('../../../public/img/capavista.jpg');
+  // background-image: url('/public/img/capavista.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -55,7 +55,7 @@
 }
 @media (max-width: 767px) {
   .text h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .text p {

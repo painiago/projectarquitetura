@@ -1,15 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const isDevelopment = process.env.NODE_ENV !== 'production';
-// const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   devtool: 'eval-source-map',
-  entry: path.resolve(__dirname, 'src', 'index.tsx'), 
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -17,26 +16,12 @@ module.exports = {
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'public'),
-    }
+    },
   },
-  // optimization: {
-  //   minimize: true,
-  //   minimizer: [
-  //     new TerserPlugin({
-  //       parallel: true,
-  //       terserOptions: {
-  //         ecma: 6,
-  //       },
-  //     }),
-  //   ],
-  //   splitChunks: {
-  //     chunks: 'all',
-  //   },
-  // },
   plugins: [
-    new HtmlWebpackPlugin ({
-      template: path.resolve (__dirname, 'public', 'index.html'),
-    })
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public', 'index.html'),
+    }),
   ],
   module: {
     rules: [
@@ -50,11 +35,33 @@ module.exports = {
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]',
+              // outputPath: 'images',
+              esModule: false,
+            }
+          }
+        ]
+      },
+      // {
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 8192,
+      //         name: '[name].[hash].[ext]',
+      //         // outputPath: 'images',
+
+      //       }
+      //     }
+      //   ]
+      // }
     ],
   },
-  // performance: {
-  //   hints: 'warning',
-  //   maxAssetSize: 244000,
-  //   maxEntrypointSize: 500000,
-  // },
 };

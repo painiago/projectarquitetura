@@ -1,5 +1,10 @@
 
 import { Link } from 'react-router-dom';
+import React from 'react';
+
+// importação das imagens
+import logo from '/public/img/logo.png';
+
 import  './navbar.scss';
 
 
@@ -7,7 +12,7 @@ function NavBar (){
   return (
     <nav className="navbar">
       <ul className="navlist">
-        <img src="../../img/logo.png" alt="" className='imglogo'/>
+        <img src={logo} alt="" className='imglogo'/>
         <li>
           <a href="#sobre" id='texto'>Sobre</a>
         </li>
