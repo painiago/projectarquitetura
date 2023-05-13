@@ -21,6 +21,7 @@ function Agendamento() {
   const [emailError, setEmailError] = useState('');
   const [dataError, setDataError] = useState('');
   const [horarioError, setHorarioError] = useState('');
+  const [mensagem, setMensagem] = useState('');
 
   function handleSubmit(event: { preventDefault: () => void; }) {
 
@@ -63,21 +64,25 @@ function Agendamento() {
 
 
       if (formIsValid) {
-    axios.post('/api/enviarDadosParaFaunaDB', { nome, email, data, horario })
-      .then(() => {
-        // console.log('Dados enviados para o FaunaDB com sucesso!');
-        setNome('');
-        setEmail('');
-        setData('');
-        setHorario('');
-      })
-      .catch((error) => {
-        // console.error('Erro ao enviar dados para o FaunaDB:', error);
-      });
-  }
-  }
-
-
+        axios.post('http://localhost:3001/enviarDadosParaFaunaDB', { 
+          nome: nome,
+          email: email,
+          data: data,
+          horario: horario 
+        })
+        .then(() => {
+          console.log('Dados enviados com sucesso!');
+          setNome('');
+          setEmail('');
+          setData('');
+          setHorario('');
+          setMensagem('Dados enviados com sucesso!');
+        })
+        .catch((error) => {
+          console.error('Erro ao enviar dados para o FaunaDB: :(', error);
+        });
+      }
+    }        
   return (
     <div className='containeragendamento' id="itemcontato">
       <div className='contentagentamento'>
@@ -106,10 +111,12 @@ function Agendamento() {
              <label htmlFor='horario'>Horário</label>
              <input type='time' id='horario' name='horario' value={horario} onChange={(event) => setHorario(event.target.value)} />
               {horarioError && <div className='error'>{horarioError}</div>}
+              {mensagem && <p>{mensagem}</p>}
              <button type='submit'>Agendar</button>
            </form>
            ) : (
              <button className='btn' onClick={toggleForm}>Agende uma consulta</button>
+             
            )}
         </div>
       </div>

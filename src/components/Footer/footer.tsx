@@ -4,13 +4,13 @@ import { faInstagram, faTiktok, faFacebookSquare } from '@fortawesome/free-brand
 import './footer.scss'
 
 // importação das imagens
-import logoFooter from '/public/img/logo.png';
+import logo from '/public/img/logo.png';
 
 function Footer (){
   return(
     <div className='containerfooter'>
       <div className='contentfooter'>
-      <img src={logoFooter} alt="" className='imglogo'/>
+      <img src={logo} alt="" className='imglogo'/>
       <div className='containeremail'>
       <h2>EMAIL - CONTATO</h2>
       <p>anasouzasilvacruz@gmail.com.br</p>
