@@ -1,7 +1,7 @@
 # portifolioarquitetura
 ![Captura de Tela (656)](https://github.com/painiago/projectarquitetura/assets/95057970/969283dc-46d9-4a11-9db5-cccf5748b6c3)
 
-O projeto em questão é um portfólio pessoal de arquitetura desenvolvido com a tecnologia React e JavaScript. O objetivo principal é apresentar os trabalhos realizados pelo arquiteto, juntamente com informações relevantes sobre sua formação e experiência profissional.
+O projeto em questão é um portfólio pessoal de arquitetura desenvolvido com a tecnologia React e TypeScript. O objetivo principal é apresentar os trabalhos realizados pelo arquiteto, juntamente com informações relevantes sobre sua formação e experiência profissional.
 
 Para o armazenamento de dados, foi utilizado o FaunaDB, um banco de dados NoSQL altamente escalável e seguro. Com ele, é possível armazenar e gerenciar informações de agendamento dos clientes.
 
