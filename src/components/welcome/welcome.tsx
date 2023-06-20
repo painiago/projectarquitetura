@@ -17,7 +17,7 @@ function Welcome() {
           <p className="subtitle">Construir, criar e ser capaz de traduzir
             um desejo é uma arte!</p>
         </div>
-        <div className='social-icons'>
+        <div className='social-iconss'>
             <FontAwesomeIcon icon={faInstagram} className='iconIns'/>
             <FontAwesomeIcon icon={faTiktok}  className='iconTik'/>
             <FontAwesomeIcon icon={faFacebookSquare}  className='iconFace'/>
